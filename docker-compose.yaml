@@ -1,0 +1,11 @@
+services:
+  sim:
+    build: .
+    container_name: ros2_sim_container
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./:/root/maps
+    stdin_open: true
+    tty: true
+    command: bash -c "tail -f /dev/null"
