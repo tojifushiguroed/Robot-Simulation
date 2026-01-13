@@ -147,20 +147,20 @@ Cause: High data throughput overloading the browser client.
 
 Solution: Decrease the simulation update rate in simple_sim.py (e.g., change timer from 0.1s to 0.2s) and refresh Foxglove (Cmd+R).
 
-////////////
+
 ##### Robot stops moving unexpectedly
 
 Cause: The Safety Watchdog timer is triggering due to command latency.
 
 Solution: Increase the watchdog tolerance in simple_sim.py or ensure the network connection is stable.
-////////////
+
 
 ##### Ghost Obstacles (Black spots in empty space)
 
 Cause: Network lag causing slight desynchronization between Lidar data and Robot TF during rotation.
 
 Solution: These are temporary artifacts in the local costmap. Drive the robot over the area to clear them via ray-tracing updates.
-///////////
+
 
 ##### Robot does not appear on the map (Nav2 Mode)
 
